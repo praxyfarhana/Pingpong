@@ -1,5 +1,17 @@
 body {
   background-image: url("http://bsnscb.com/data/out/128/40010601-mint-wallpapers.png");
   margin:10%;
-  float:left;
     }
+
+img{
+  float: left;
+  height: 300px;
+  width: 300px
+  }
+
+.output {
+     padding:30px;
+     text-align: center;
+     font-size: 30px;
+     font-family: cursive;
+}
