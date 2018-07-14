@@ -1,12 +1,13 @@
 body {
   background-image: url("http://bsnscb.com/data/out/128/40010601-mint-wallpapers.png");
   margin:10%;
+  position: relative;
     }
 
 img{
   float: left;
-  height: 300px;
-  width: 300px
+  height: 150px;
+  width: 150px
   }
 
 .output {
@@ -14,4 +15,7 @@ img{
      text-align: center;
      font-size: 30px;
      font-family: cursive;
+}
+p1{
+  text-align: center;
 }

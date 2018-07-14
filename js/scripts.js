@@ -1,25 +1,25 @@
 //business logic
-var theFormNumbers = [];
-function praxy(finisher){
-  for(var index = 1; index <=finisher; index++)
+var forCounts = [];
+function praxy(termina){
+  for(var index = 1; index <=termina; index++)
         if (index % 15 === 0){
-    theFormNumbers.push("ping pong");
+    forCounts.push("ping pong");
   }else if (index % 5 ===0){
-    theFormNumbers.push("pong");
+    forCounts.push("pong");
   }else if (index % 3 ===0){
-    theFormNumbers.push("ping");
+    forCounts.push("ping");
   }else{
-    theFormNumbers.push(index);
+    forCounts.push(index);
   }
 }
 
 //user interface
 $(document).ready(function(){
-  $("#button").click(function(){
-    var finisher = parseInt($("#numberInput").val());
-    praxy(finisher);
-    theFormNumbers.forEach(function(finisher){
-      $("#results").append("<li>"+finisher+"</li>");
+  $("#png").click(function(){
+    var termina = parseInt($("#numberInput").val());
+    praxy(termina);
+    forCounts.forEach(function(termina){
+      $("#results").append("<li>"+termina+"</li>");
     });
   });
 });
