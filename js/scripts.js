@@ -1,4 +1,4 @@
-//business logic
+
 var forCounts = [];
 function praxy(termina){
   for(var index = 1; index <=termina; index++)
@@ -13,9 +13,9 @@ function praxy(termina){
   }
 }
 
-//user interface
+
 $(document).ready(function(){
-  $("#png").click(function(){
+  $("#theForm").click(function(){
     var termina = parseInt($("#numberInput").val());
     praxy(termina);
     forCounts.forEach(function(termina){
