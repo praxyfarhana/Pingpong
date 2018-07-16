@@ -1,25 +1,29 @@
-
-var forCounts = [];
-function praxy(termina){
-  for(var index = 1; index <=termina; index++)
-        if (index % 15 === 0){
-    forCounts.push("ping pong");
-  }else if (index % 5 ===0){
-    forCounts.push("pong");
-  }else if (index % 3 ===0){
-    forCounts.push("ping");
-  }else{
-    forCounts.push(index);
+    //back-end//
+var number;
+function pingpong() {
+  for(var i=1; i<=number; i++)
+  if((i % 3 === 0) && (i % 5 === 0)) {
+    $(".output").append('<li>pingpong</li>');
+  }
+  else if(i % 3 ===0) {
+    $(".output").append('<li>ping</li>');
+  }
+  else if(i % 5 ===0) {
+    $(".output").append('<li>pong</li>');
+  }
+  else {
+    $(".output").append("<li>" + i + "</li>");
   }
 }
 
 
-$(document).ready(function(){
-  $("#theForm").click(function(){
-    var termina = parseInt($("#numberInput").val());
-    praxy(termina);
-    forCounts.forEach(function(termina){
-      $("#results").append("<li>"+termina+"</li>");
+    //front-end//
+  $(document).ready(function () {
+    $("form#theForm").submit(function() {
+      number=$("input#numberInput").val();
+      $(".output").text('');
+      pingpong();
+      $("input").val();
+      event.preventDefault();
     });
   });
-});
